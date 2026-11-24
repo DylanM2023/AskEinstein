@@ -26,8 +26,6 @@ function App() {
         setHistory((prev) => [...prev, { sender: "bot", text: data.message }])
 
         //this clears the input box after sending
-        // e.preventDefault()
-        // setHistory([...history, message])
         setMessage("");
     };
 
@@ -36,16 +34,10 @@ function App() {
         <h1>AskEinstein?</h1>
         <h2>Messages:</h2>
 
-        {/* <ul>
-            {history.map((item, index)=>(
-                <p key={index}>You: {item}</p>
-            ))}
-        </ul> */}
-
         <div className="message-container">
             {history.map((m, i) => (
-                <div>
-                    <strong key={i}>{m.sender === "user" ? "You" : "Bot"}:</strong> {m.text}
+                <div key={i}>
+                    <strong>{m.sender === "user" ? "You" : "Bot"}:</strong> {m.text}
                 </div>
             ))}
         </div>
