@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
     res.send('Hello I am Einstein!');
 });
 
+app.get('/api/message', (req, res) => {
+    res.json({"message": 1})
+});
+
 app.listen(port, ()=>{
     console.log(`Server listening on port ${port}`);
 });
