@@ -1,0 +1,272 @@
+{
+  "figure": "Albert Einstein",
+  "start": "welcome",
+  "fallback": {
+    "text": "Hmm, I didn't recognise that choice. Let's try again.",
+    "next": "welcome"
+  },
+  "nodes": {
+    "welcome": {
+      "text": "Hello! I am Albert Einstein. I love big questions. What would you like to talk about?",
+      "options": [
+        {
+          "label": "Time",
+          "next": "time_intro"
+        },
+        {
+          "label": "Light",
+          "next": "light_intro"
+        },
+        {
+          "label": "My Life",
+          "next": "life_intro"
+        }
+      ]
+    },
+    "time_intro": {
+      "text": "Great choice! Does time pass at the same rate for everyone?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "time_yes"
+        },
+        {
+          "label": "No",
+          "next": "time_no"
+        },
+        {
+          "label": "I don't know",
+          "next": "time_story"
+        }
+      ]
+    },
+    "time_yes": {
+      "text": "It can seem that way, but time can pass differently. Imagine flying into space at nearly the speed of light and then coming back. Your watch would show that less time had passed than a watch that stayed on Earth.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "time_no": {
+      "text": "That's right! Your watch ticks normally for you during the trip. When you get back, you can compare your watch with one that stayed on Earth. The two watches can show different amounts of time.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "time_story": {
+      "text": "Let's try a story. Two twins set their watches to the same time. One stays on Earth. The other flies into space very fast and comes back. Which watch do you think will show that less time has passed?",
+      "options": [
+        {
+          "label": "The traveller's watch",
+          "next": "time_story_right"
+        },
+        {
+          "label": "The watch on Earth",
+          "next": "time_story_wrong"
+        }
+      ]
+    },
+    "time_story_right": {
+      "text": "That's right! Less time passed for the twin who travelled.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "time_story_wrong": {
+      "text": "Good guess! The traveller's watch shows less time has passed. We can see the difference when the twins meet again and compare their watches.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "light_intro": {
+      "text": "Let's talk about light. Do you think light carries energy?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "light_yes"
+        },
+        {
+          "label": "No",
+          "next": "light_no"
+        },
+        {
+          "label": "I don't know",
+          "next": "light_unsure"
+        }
+      ]
+    },
+    "light_yes": {
+      "text": "That's right! Light carries energy in tiny packets called photons. Each photon carries a small amount of energy.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "light_no": {
+      "text": "Light does carry energy. When light shines on a metal surface, it can free an electron if a photon has enough energy.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "light_unsure": {
+      "text": "Yes, light carries energy. Think about sunlight on your skin. When your skin absorbs some of that light, it warms up. The light has given some of its energy to your skin.",
+      "options": [
+        {
+          "label": "How does light carry energy?",
+          "next": "light_how"
+        },
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        }
+      ]
+    },
+    "light_how": {
+      "text": "Photons can pass their energy to other things. When a photon with enough energy hits a metal surface, it can free an electron from the metal. This is called the photoelectric effect.",
+      "options": [
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "life_intro": {
+      "text": "What would you like to know about my life?",
+      "options": [
+        {
+          "label": "Where did you grow up?",
+          "next": "life_grow"
+        },
+        {
+          "label": "Where did you study?",
+          "next": "life_study"
+        },
+        {
+          "label": "What was your job before you became a professor?",
+          "next": "life_job"
+        },
+        {
+          "label": "What awards did you receive?",
+          "next": "life_awards"
+        }
+      ]
+    },
+    "life_grow": {
+      "text": "I was born in Ulm, Germany, in 1879. I grew up in Munich.",
+      "options": [
+        {
+          "label": "Ask another question about my life",
+          "next": "life_intro"
+        },
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "life_study": {
+      "text": "I studied in Zurich, Switzerland. In 1900, I earned a diploma to teach maths and science.",
+      "options": [
+        {
+          "label": "Ask another question about my life",
+          "next": "life_intro"
+        },
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "life_job": {
+      "text": "In 1902, I started working at the patent office in Bern, Switzerland. My job was to review applications for new inventions. While I worked there, I also wrote about physics. In 1905, I published a paper on special relativity.",
+      "options": [
+        {
+          "label": "Ask another question about my life",
+          "next": "life_intro"
+        },
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "life_awards": {
+      "text": "I was awarded the 1921 Nobel Prize in Physics, especially for my work on the photoelectric effect. I also received the Copley Medal in 1925 and the Royal Astronomical Society's Gold Medal in 1926.",
+      "options": [
+        {
+          "label": "Ask another question about my life",
+          "next": "life_intro"
+        },
+        {
+          "label": "Choose another topic",
+          "next": "welcome"
+        },
+        {
+          "label": "End conversation",
+          "next": "goodbye"
+        }
+      ]
+    },
+    "goodbye": {
+      "text": "Thanks for chatting with me. Stay curious!",
+      "options": [],
+      "end": true
+    }
+  }
+}
