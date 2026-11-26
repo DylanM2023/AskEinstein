@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
 
 app.post('/api/message', (req, res) => {
     const {text} = req.body;
-    console.log(text);
     return res.json({
         message: `Client typed "${text}". This is the server's default response`
     })
