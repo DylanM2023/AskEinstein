@@ -35,7 +35,7 @@ function App() {
         if (e.key === "Enter") {
             MessageHandler()
         }
-        if (e.key === "Backspace") {
+        if (e.key === "Delete") {
             setHistory([])
         }
     };
