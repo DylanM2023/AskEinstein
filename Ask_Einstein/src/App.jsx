@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 
@@ -29,23 +29,44 @@ function App() {
         setMessage("");
     };
 
+    // Bound the enter key submit whatever is in input box
+    // Bound backspace to clearing the chat
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            MessageHandler()
+        }
+        if (e.key === "Backspace") {
+            setHistory([])
+        }
+    };
+    
+
     return(
     <>
-        <h1>AskEinstein?</h1>
-        <h2>Messages:</h2>
+        <h1 className="font-bold text-6xl">AskEinstein?</h1>
+        <div className="flex-col w-full justify-items-center py-3">
+            <h2 className="text-2xl">Messages</h2>
 
-        <div className="message-container">
-            {history.map((m, i) => (
-                <div key={i}>
-                    <strong>{m.sender === "user" ? "You" : "Bot"}:</strong> {m.text}
+            <div className="message-container border-2 w-2/3 h-100 overflow-y-scroll">
+                {history.map((m, i) => (
+                    <div key={i}>
+                        <strong>{m.sender === "user" ? "You" : "Bot"}:</strong> {m.text}
+                    </div>
+                ))}
+            </div>
+
+            <div className="w-2/3 flex gap-10 py-2">
+                <input 
+                className="border-2 grow max-w-2/3" type="search" 
+                placeholder="Ask Question" value={message} 
+                onChange={(e)=>{setMessage(e.target.value)}}
+                onKeyDown={handleKeyDown}
+                />
+                <div className=" jusrobject-right flex gap-2">
+                    <button className="p-2 border-2 rounded-2xl hover:bg-blue-50" onClick={MessageHandler}>Enter</button>
+                    <button className="p-2 border-2 rounded-2xl hover:bg-blue-50" onClick={()=>{setHistory([])}}>Clear</button>
                 </div>
-            ))}
-        </div>
-
-        <div>
-            <input type="search" placeholder="Ask Question" value={message} onChange={(e)=>{setMessage(e.target.value)}}/>
-            <button onClick={MessageHandler}>Enter</button>
-            <button onClick={()=>{setHistory([])}}>Clear</button>
+            </div>
         </div>
 
     </>
